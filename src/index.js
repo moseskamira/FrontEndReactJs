@@ -1,10 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import Routes from './routes';
+import { Provider } from 'react-redux';
+import store from './store/combineStore';
 
-const title = 'Fast Food Fast';
+import 'react-toastify/dist/ReactToastify.css';
+
 
 ReactDOM.render(
-  <div>{title}</div>,
-  document.getElementById('app')
+  <Provider store={store}>
+    <Routes/>
+  </Provider>,
+  document.getElementById('app'),
 );
+
 module.hot.accept();
