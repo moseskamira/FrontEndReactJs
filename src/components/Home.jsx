@@ -2,21 +2,12 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import SignUp from './SignUp';
+import Login from './Login';
 
 
 export class Home extends Component {
 
-  handleClick(e) {
-    e.preventDefault();
-    if (this.props.signin) {
-    this.props.signin.success
-      ? this.props.history.push('/placeorder')
-      : this.props.history.push('/login');
-    }
-  }
-
   render() {
-
     return (
       <div>
         <section>
@@ -25,9 +16,11 @@ export class Home extends Component {
             <h2> <strong><center>FAST FOOD FAST </center></strong></h2>
             </div>
             <div>
+              <Login />
+            </div>
+            <div>
               <SignUp/>
             </div>
-
         </div>
         </section>
       </div>

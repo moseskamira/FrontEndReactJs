@@ -30,7 +30,6 @@ export class  SignUp extends Component{
                 "phone_number": this.state.phone_number,
                 "password": this.state.password,
             };
-            console.log(this.state)
             this.props.fetchSignUp(data);
           };
         render(){
@@ -45,17 +44,17 @@ export class  SignUp extends Component{
                     <div class="form-group">
                             <label for="firstName">First Name</label>
                             <input type="text" className="form-control" name="first_name" id="firstName" aria-describedby="emailHelp" placeholder="Enter First Name"  onChange={this.handleChangeValue}/>
-                            <small id="emailHelp" className="form-text text-muted">We'll never share your email with anyone else.</small>
+                            <small id="emailHelp" className="form-text text-muted"></small>
                         </div>
                         <div class="form-group">
                             <label for="lastName">Last Name</label>
                             <input type="text" name="last_name" className="form-control" id="exampleInputLastName" aria-describedby="emailHelp" placeholder="Enter Last Name"  onChange={this.handleChangeValue}/>
-                            <small id="emailHelp" className="form-text text-muted">We'll never share your email with anyone else.</small>
+                            <small id="emailHelp" className="form-text text-muted"></small>
                         </div>
                         <div class="form-group">
                             <label for="email">Email address</label>
                             <input type="email" name="email_address"className="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email"  onChange={this.handleChangeValue}/>
-                            <small id="emailHelp" className="form-text text-muted">We'll never share your email with anyone else.</small>
+                            <small id="emailHelp" className="form-text text-muted"></small>
                         </div>
                         <div class="form-group">
                             <label for="phone">Phone Number</label>
