@@ -5,7 +5,7 @@ jobs:
      - image: circleci/node:11.9.0
    steps:
      - checkout
-     - restore_cache: #restore the dependancy cache
+     - restore_cache:
          key: dependancy-cache-{{ checksum "package.json" }}
      - run:
          name: Setup Dependancies
@@ -15,7 +15,7 @@ jobs:
          command: |
            curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
            chmod +x ./cc-test-reporter
-     - save_cache: #save dependancy cache
+     - save_cache:
          key: dependency-cache-{{ checksum "package.json" }}
          paths:
            - ./node_modules
