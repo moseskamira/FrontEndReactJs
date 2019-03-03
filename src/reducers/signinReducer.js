@@ -10,7 +10,7 @@ const initialState = {
 
 export default function signinReducer(state = initialState, action) {
     switch (action.type) {
-        case SIGNIN_SUCCESS:
+        case type.SIGNIN_SUCCESS:
             return {
                 ...state,
                 message: action.message,
