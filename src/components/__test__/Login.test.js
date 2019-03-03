@@ -1,21 +1,21 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import { SignUp } from '../SignUp'
+import { Login } from '../Login'
 import { mapStateToProps } from '../SignUp';
 
-describe('Create User', () => {
+describe('Login user', () => {
   let wrapper;
   const historyMock = { push: jest.fn() };
   const mockCreate = jest.fn();
 
   beforeEach(() => {
-    wrapper = shallow(<SignUp fetchSignUp={mockCreate} history={historyMock} />);
+    wrapper = shallow(<Login signinAction={mockCreate} history={historyMock} />);
   });
   afterEach(() => {
     mockCreate.mock.calls = [];
   });
   describe('When form is submitted', () => {
-    it('should mock a signup function', () => {
+    it('should mock a login function', () => {
       wrapper.find('#email').simulate('change', {
         target: { name: 'email_address', value: 'moses.african@gmail.com' }
       });
@@ -29,7 +29,6 @@ describe('Create User', () => {
       const state = mapStateToProps(mockedState);
 
       expect(state).toEqual({ email_address: 'moses.african@gmail.com' });
-    })
-   
+    });
   });
 });

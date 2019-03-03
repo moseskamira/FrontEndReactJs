@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <title>Code coverage report for components/Home.jsx</title>
+    <title>Code coverage report for reducers/signinReducer.js</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="../prettify.css" />
     <link rel="stylesheet" href="../base.css" />
@@ -16,18 +16,18 @@
 <div class='wrapper'>
   <div class='pad1'>
     <h1>
-      <a href="../index.html">All files</a> / <a href="index.html">components</a> Home.jsx
+      <a href="../index.html">All files</a> / <a href="index.html">reducers</a> signinReducer.js
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
-        <span class="strong">0% </span>
+        <span class="strong">20% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>0/1</span>
+        <span class='fraction'>1/5</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">100% </span>
+        <span class="strong">0% </span>
         <span class="quiet">Branches</span>
-        <span class='fraction'>0/0</span>
+        <span class='fraction'>0/4</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">0% </span>
@@ -35,9 +35,9 @@
         <span class='fraction'>0/1</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">0% </span>
+        <span class="strong">20% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>0/1</span>
+        <span class='fraction'>1/5</span>
       </div>
     </div>
     <p class="quiet">
@@ -81,6 +81,16 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -95,50 +105,40 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import { bindActionCreators } from 'redux';
-import SignUp from './SignUp';
-import Login from './Login';
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">&nbsp;
+import * as type from '../actions/actionTypes'
 &nbsp;
 &nbsp;
-export class Home extends Component {
+const initialState = {
+    success: null,
+    error: null,
+    message: null
+};
 &nbsp;
-<span class="fstat-no" title="function not covered" >  re</span>nder() {
-<span class="cstat-no" title="statement not covered" >    return (</span>
-      &lt;div&gt;
-        &lt;section&gt;
-        &lt;div id="textOverlay"&gt;
-            &lt;div&gt;
-            &lt;h2&gt; &lt;strong&gt;&lt;center&gt;FAST FOOD FAST &lt;/center&gt;&lt;/strong&gt;&lt;/h2&gt;
-            &lt;/div&gt;
-            &lt;div&gt;
-              &lt;Login /&gt;
-            &lt;/div&gt;
-            &lt;div&gt;
-              &lt;SignUp/&gt;
-            &lt;/div&gt;
-        &lt;/div&gt;
-        &lt;/section&gt;
-      &lt;/div&gt;
-    );
-  }
+export default function <span class="fstat-no" title="function not covered" >signinReducer(</span>state = <span class="branch-0 cbranch-no" title="branch not covered" >initialState,</span> action) {
+<span class="cstat-no" title="statement not covered" >    switch (action.type) {</span>
+        case SIGNIN_SUCCESS:
+<span class="cstat-no" title="statement not covered" >            return {</span>
+                ...state,
+                message: action.message,
+                success: true,
+                error: ''
+            };
+        case type.SIGNIN_FAILURE:
+<span class="cstat-no" title="statement not covered" >            return {</span>
+                ...state,
+                error: action.error,
+                success: false,
+                message: null,
+            };
+&nbsp;
+        default:
+<span class="cstat-no" title="statement not covered" >            return state;</span>
+    }
 }
-&nbsp;
-export default Home
 &nbsp;</pre></td></tr>
 </table></pre>
 <div class='push'></div><!-- for sticky footer -->
