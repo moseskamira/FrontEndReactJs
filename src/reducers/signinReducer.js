@@ -3,14 +3,14 @@ import * as type from '../actions/actionTypes'
 
 
 const initialState = {
-    success: null,
+    success: false,
     error: null,
     message: null
 };
 
 export default function signinReducer(state = initialState, action) {
     switch (action.type) {
-        case SIGNIN_SUCCESS:
+        case type.SIGNIN_SUCCESS:
             return {
                 ...state,
                 message: action.message,

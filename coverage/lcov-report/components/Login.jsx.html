@@ -20,31 +20,31 @@
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
-        <span class="strong">90% </span>
+        <span class="strong">75% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>9/10</span>
+        <span class='fraction'>9/12</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">100% </span>
+        <span class="strong">0% </span>
         <span class="quiet">Branches</span>
-        <span class='fraction'>0/0</span>
+        <span class='fraction'>0/2</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">80% </span>
+        <span class="strong">66.67% </span>
         <span class="quiet">Functions</span>
-        <span class='fraction'>4/5</span>
+        <span class='fraction'>4/6</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">100% </span>
+        <span class="strong">75% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>9/9</span>
+        <span class='fraction'>9/12</span>
       </div>
     </div>
     <p class="quiet">
       Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
     </p>
   </div>
-  <div class='status-line high'></div>
+  <div class='status-line medium'></div>
 <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -106,7 +106,13 @@
 <a name='L58'></a><a href='#L58'>58</a>
 <a name='L59'></a><a href='#L59'>59</a>
 <a name='L60'></a><a href='#L60'>60</a>
-<a name='L61'></a><a href='#L61'>61</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L61'></a><a href='#L61'>61</a>
+<a name='L62'></a><a href='#L62'>62</a>
+<a name='L63'></a><a href='#L63'>63</a>
+<a name='L64'></a><a href='#L64'>64</a>
+<a name='L65'></a><a href='#L65'>65</a>
+<a name='L66'></a><a href='#L66'>66</a>
+<a name='L67'></a><a href='#L67'>67</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -127,20 +133,20 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -157,35 +163,42 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React, {Component} from 'react';
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import {signinAction} from '../actions/signinAction'
-import{signinReducer} from '../reducers/signinReducer'
+import { withRouter } from 'react-router-dom'
+import { signinAction } from '../actions/signinAction'
 &nbsp;
-export class  Login extends Component{
-    constructor(props){
+export class Login extends Component {
+    constructor(props) {
         super(props)
         this.state = {
             email_address: '',
             password: ''
-          };
-&nbsp;
+          }
     }
+&nbsp;
     handleChangeValue = (e) =&gt; {
         this.setState({
             [e.target.name]: e.target.value
             });
         };
+&nbsp;
     handleSubmit = (e) =&gt; {
         e.preventDefault();
         const data = {
@@ -193,22 +206,21 @@ export class  Login extends Component{
             password: this.state.password,
 &nbsp;
             };
+&nbsp;
             this.props.signinAction(data);
           };
-          
 &nbsp;
-          
-        //   componentWillReceiveProps(nextProps) {
-        //       console.log("These are the next props: ",nextProps, this.props);
-              
-        //     if (st.success === true) {
-        //       nextProps.history.push('/place-order');
-        //     }
-        //   }
-    render(){
-        return(
+<span class="fstat-no" title="function not covered" >          co</span>mponentWillReceiveProps(nextProps) {
+<span class="cstat-no" title="statement not covered" >                if (nextProps.signIn.success) {</span>
+<span class="cstat-no" title="statement not covered" >                    nextProps.history.push('/place-order')</span>
+                }
+          }
+&nbsp;
+&nbsp;
+    render() {
+return (
             &lt;form onSubmit={ this.handleSubmit }&gt;
-                &lt;div className="row"&gt; 
+                &lt;div className="row"&gt;
                     &lt;div className="col"&gt; &lt;/div&gt;
                     &lt;div className="col-2"&gt;&lt;input type="email" onChange={this.handleChangeValue} name="email_address" className="form-control" id="email" placeholder="Enter Email"/&gt;&lt;/div&gt;
                     &lt;div className="col-2"&gt;&lt;input type="password" onChange={this.handleChangeValue} name="password" className="form-control" placeholder="Enter Password"/&gt;&lt;/div&gt;
@@ -216,23 +228,29 @@ export class  Login extends Component{
                 &lt;/div&gt;
             &lt;/form&gt;
         )
-    }}
+    }
+}
     Login.propTypes = {
         handleChangeValue: PropTypes.func,
         handleSubmit: PropTypes.func
       };
-      const mapStateToProps = <span class="fstat-no" title="function not covered" >st</span>ate =&gt; <span class="cstat-no" title="statement not covered" >state;</span>
-      
-      export default connect(
-        mapStateToProps,
-        { signinAction }
-      )(Login);</pre></td></tr>
+&nbsp;
+      const mapStateToProps = <span class="fstat-no" title="function not covered" >(s</span>tate) =&gt; {
+        
+&nbsp;
+<span class="cstat-no" title="statement not covered" >return {</span>
+            signIn: state.signin
+        }
+            };
+&nbsp;
+export default withRouter(connect(mapStateToProps, { signinAction })(Login));
+&nbsp;</pre></td></tr>
 </table></pre>
 <div class='push'></div><!-- for sticky footer -->
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Sun Mar 03 2019 15:56:01 GMT+0300 (East Africa Time)
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Mon Mar 04 2019 09:54:31 GMT+0300 (East Africa Time)
 </div>
 </div>
 <script src="../prettify.js"></script>
