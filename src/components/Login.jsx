@@ -1,23 +1,24 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import {signinAction} from '../actions/signinAction'
-import{signinReducer} from '../reducers/signinReducer'
+import { withRouter } from 'react-router-dom'
+import { signinAction } from '../actions/signinAction'
 
-export class  Login extends Component{
-    constructor(props){
+export class Login extends Component {
+    constructor(props) {
         super(props)
         this.state = {
             email_address: '',
             password: ''
-          };
-
+          }
     }
+
     handleChangeValue = (e) => {
         this.setState({
             [e.target.name]: e.target.value
             });
         };
+
     handleSubmit = (e) => {
         e.preventDefault();
         const data = {
@@ -25,13 +26,21 @@ export class  Login extends Component{
             password: this.state.password,
 
             };
+
             this.props.signinAction(data);
           };
-          
-    render(){
-        return(
+
+          componentWillReceiveProps(nextProps) {
+                if (nextProps.signIn.success) {
+                    nextProps.history.push('/place-order')
+                }
+          }
+
+
+    render() {
+return (
             <form onSubmit={ this.handleSubmit }>
-                <div className="row"> 
+                <div className="row">
                     <div className="col"> </div>
                     <div className="col-2"><input type="email" onChange={this.handleChangeValue} name="email_address" className="form-control" id="email" placeholder="Enter Email"/></div>
                     <div className="col-2"><input type="password" onChange={this.handleChangeValue} name="password" className="form-control" placeholder="Enter Password"/></div>
@@ -39,14 +48,19 @@ export class  Login extends Component{
                 </div>
             </form>
         )
-    }}
+    }
+}
     Login.propTypes = {
         handleChangeValue: PropTypes.func,
         handleSubmit: PropTypes.func
       };
-      const mapStateToProps = state => state;
-      
-      export default connect(
-        mapStateToProps,
-        { signinAction }
-      )(Login);
+
+      const mapStateToProps = (state) => {
+        
+
+return {
+            signIn: state.signin
+        }
+            };
+
+export default withRouter(connect(mapStateToProps, { signinAction })(Login));

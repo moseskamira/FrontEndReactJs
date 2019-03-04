@@ -15,7 +15,6 @@ export const signinAction = (data) => (dispatch) =>
                 message: response.data
                 
             });
-            console.log(response.data)
             
         }).catch(error => {
             dispatch({

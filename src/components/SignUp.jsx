@@ -58,7 +58,7 @@ export class  SignUp extends Component{
                         </div>
                         <div class="form-group">
                             <label for="phone">Phone Number</label>
-                            <input type="phone" name="phone_number" className="form-control" id="exampleInputPhoneNumber" placeholder="Password"  onChange={this.handleChangeValue}/>
+                            <input type="phone" name="phone_number" className="form-control" id="exampleInputPhoneNumber" placeholder="Phone Number"  onChange={this.handleChangeValue}/>
                         </div>
                         <div class="form-group">
                             <label for="password">Password</label>

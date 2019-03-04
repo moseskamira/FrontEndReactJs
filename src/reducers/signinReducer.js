@@ -3,7 +3,7 @@ import * as type from '../actions/actionTypes'
 
 
 const initialState = {
-    success: null,
+    success: false,
     error: null,
     message: null
 };
