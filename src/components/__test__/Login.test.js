@@ -1,7 +1,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import { Login } from '../Login'
-import { mapStateToProps } from '../SignUp';
+import { mapStateToProps } from '../Login';
 
 describe('Login user', () => {
   let wrapper;
@@ -24,11 +24,11 @@ describe('Login user', () => {
     });
     it('mapStateToProps should return the right value', () => {
       const mockedState = {
-        email_address: 'moses.african@gmail.com'
+        signin: 'moses.african@gmail.com'
       };
       const state = mapStateToProps(mockedState);
 
-      expect(state).toEqual({ email_address: 'moses.african@gmail.com' });
+      expect(state.signIn).toEqual('moses.african@gmail.com');
     });
   });
 });

@@ -55,7 +55,7 @@ return (
         handleSubmit: PropTypes.func
       };
 
-      const mapStateToProps = (state) => {
+     export const mapStateToProps = (state) => {
         
 
 return {

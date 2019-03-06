@@ -11,3 +11,7 @@
     display: flex;
     float: none;
 }
+.register{
+    float: right;
+    margin-right: 5%;
+}

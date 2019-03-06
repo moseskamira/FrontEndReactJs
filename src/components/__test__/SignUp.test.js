@@ -24,11 +24,11 @@ describe('Create User', () => {
     });
     it('mapStateToProps should return the right value', () => {
       const mockedState = {
-        email_address: 'moses.african@gmail.com'
+        signup: {message: "sucessfully signup"}
       };
       const state = mapStateToProps(mockedState);
 
-      expect(state).toEqual({ email_address: 'moses.african@gmail.com' });
+      expect(state.signUp).toEqual("sucessfully signup");
     })
    
   });

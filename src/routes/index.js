@@ -11,9 +11,8 @@ const Routes = () => (
 
     <BrowserRouter>
       <div>
-        {/* <Route exact path="/signup" component={SignUp} /> */}
+        <Route exact path="/signup" component={SignUp} />
         <Route exact path="/" component={Home} />
-        {/* <Route exact path="/signin" component={Login} /> */}
         <Route exact path="/place-order" component={Order} />
         <ToastContainer />
       </div>

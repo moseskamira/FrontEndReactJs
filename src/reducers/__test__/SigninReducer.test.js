@@ -25,4 +25,13 @@ describe('Signin Reducer', () => {
     const newState = signinReducer(initialState, action);
     expect(newState).toEqual({ "error": "", "message": "signed in", "success": true, });
   });
+  it('should be able to return a message on failure', () => {
+    const action = {
+      type: SIGNIN_FAILURE,
+      error: "failed"
+    };
+    
+    const newState = signinReducer(initialState, action);
+    expect(newState).toEqual({ "error": "failed", "message": null, "success": false, });
+  });
 });
