@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1551966354847" clover="3.2.0">
+  <project timestamp="1551966354847" name="All files">
+    <metrics statements="52" coveredstatements="46" conditionals="12" coveredconditionals="6" methods="24" coveredmethods="22" elements="88" coveredelements="74" complexity="0" loc="52" ncloc="52" packages="3" files="10" classes="10"/>
+    <package name="actions">
+      <metrics statements="17" coveredstatements="17" conditionals="0" coveredconditionals="0" methods="8" coveredmethods="8"/>
+      <file name="actionTypes.js" path="/Users/moseskamira/Desktop/FrontEndReactJs/src/actions/actionTypes.js">
+        <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="7" type="stmt"/>
+        <line num="2" count="7" type="stmt"/>
+        <line num="3" count="7" type="stmt"/>
+        <line num="4" count="7" type="stmt"/>
+        <line num="5" count="7" type="stmt"/>
+        <line num="6" count="7" type="stmt"/>
+      </file>
+      <file name="signinAction.js" path="/Users/moseskamira/Desktop/FrontEndReactJs/src/actions/signinAction.js">
+        <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="4"/>
+        <line num="5" count="3" type="stmt"/>
+        <line num="10" count="3" type="stmt"/>
+        <line num="11" count="2" type="stmt"/>
+        <line num="13" count="1" type="stmt"/>
+        <line num="20" count="1" type="stmt"/>
+      </file>
+      <file name="signupAction.js" path="/Users/moseskamira/Desktop/FrontEndReactJs/src/actions/signupAction.js">
+        <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="4"/>
+        <line num="5" count="5" type="stmt"/>
+        <line num="9" count="5" type="stmt"/>
+        <line num="10" count="2" type="stmt"/>
+        <line num="12" count="1" type="stmt"/>
+        <line num="17" count="1" type="stmt"/>
+        <line num="20" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="components">
+      <metrics statements="24" coveredstatements="20" conditionals="4" coveredconditionals="0" methods="14" coveredmethods="12"/>
+      <file name="Home.jsx" path="/Users/moseskamira/Desktop/FrontEndReactJs/src/components/Home.jsx">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="12" count="1" type="stmt"/>
+      </file>
+      <file name="Login.jsx" path="/Users/moseskamira/Desktop/FrontEndReactJs/src/components/Login.jsx">
+        <metrics statements="11" coveredstatements="9" conditionals="2" coveredconditionals="0" methods="6" coveredmethods="5"/>
+        <line num="9" count="2" type="stmt"/>
+        <line num="10" count="2" type="stmt"/>
+        <line num="17" count="1" type="stmt"/>
+        <line num="23" count="1" type="stmt"/>
+        <line num="24" count="1" type="stmt"/>
+        <line num="29" count="1" type="stmt"/>
+        <line num="33" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="34" count="0" type="stmt"/>
+        <line num="39" count="3" type="stmt"/>
+        <line num="72" count="2" type="stmt"/>
+        <line num="77" count="2" type="stmt"/>
+      </file>
+      <file name="Order.jsx" path="/Users/moseskamira/Desktop/FrontEndReactJs/src/components/Order.jsx">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="5" count="1" type="stmt"/>
+      </file>
+      <file name="SignUp.jsx" path="/Users/moseskamira/Desktop/FrontEndReactJs/src/components/SignUp.jsx">
+        <metrics statements="11" coveredstatements="9" conditionals="2" coveredconditionals="0" methods="6" coveredmethods="5"/>
+        <line num="8" count="2" type="stmt"/>
+        <line num="9" count="2" type="stmt"/>
+        <line num="19" count="1" type="stmt"/>
+        <line num="25" count="1" type="stmt"/>
+        <line num="26" count="1" type="stmt"/>
+        <line num="34" count="1" type="stmt"/>
+        <line num="38" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="39" count="0" type="stmt"/>
+        <line num="44" count="3" type="stmt"/>
+        <line num="134" count="4" type="stmt"/>
+        <line num="138" count="4" type="stmt"/>
+      </file>
+    </package>
+    <package name="reducers">
+      <metrics statements="11" coveredstatements="9" conditionals="8" coveredconditionals="6" methods="2" coveredmethods="2"/>
+      <file name="mainReducer.js" path="/Users/moseskamira/Desktop/FrontEndReactJs/src/reducers/mainReducer.js">
+        <metrics statements="1" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="5" count="0" type="stmt"/>
+      </file>
+      <file name="signinReducer.js" path="/Users/moseskamira/Desktop/FrontEndReactJs/src/reducers/signinReducer.js">
+        <metrics statements="5" coveredstatements="4" conditionals="4" coveredconditionals="2" methods="1" coveredmethods="1"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="10" count="2" type="cond" truecount="2" falsecount="1"/>
+        <line num="12" count="1" type="stmt"/>
+        <line num="19" count="1" type="stmt"/>
+        <line num="27" count="0" type="stmt"/>
+      </file>
+      <file name="signupReducer.js" path="/Users/moseskamira/Desktop/FrontEndReactJs/src/reducers/signupReducer.js">
+        <metrics statements="5" coveredstatements="5" conditionals="4" coveredconditionals="4" methods="1" coveredmethods="1"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="10" count="3" type="cond" truecount="3" falsecount="0"/>
+        <line num="12" count="1" type="stmt"/>
+        <line num="19" count="1" type="stmt"/>
+        <line num="27" count="1" type="stmt"/>
+      </file>
+    </package>
+  </project>
+</coverage>

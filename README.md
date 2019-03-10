@@ -24,3 +24,30 @@ https://www.pivotaltracker.com/n/projects/2316242
 ## LINK TO HEROKU APP
 https://fastfoodfastreactjs.herokuapp.com/
 
+
+
+## FEATURES OF FAST FOOD FAST
+
+#### Place Order
+#### View Orders
+#### Add Order Items by Admin
+#### Mark Order as completed, pending by Admin
+
+### HOW TO USE THE APPLICATION
+#### Visit the link: https://fastfoodfastreactjs.herokuapp.com/
+#### Creare an account by clicking 'Register' on the landing page
+#### You can now Login with credentials used on registration
+
+## REQUIREMENTS FOR BUILDING THE FAST FOOD FAST APPLICATION
+
+#### React JS
+#### Babel
+#### Webpack
+#### Node Js
+
+## INSTALLATION PROCEDURE
+
+#### Clone the repository found on the link: https://github.com/moseskamira/FrontEndReactJs.git
+#### cd into the FrontEndReactJs directory
+#### Run npm install to install all the dependencies
+#### Run npm start to start the application
