@@ -1,11 +1,11 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
-import { NavLink } from "react-router-dom";
-import SignUp from "./SignUp";
 import Login from "./Login";
 import "../css/main.css";
 import default_image from "../images/foodwelcome.jpg";
+import food from "../images/food.jpg";
+import { NavLink } from "react-router-dom";
 
 export class Home extends Component {
   render() {
@@ -25,23 +25,26 @@ export class Home extends Component {
               <Login />
             </div>
             <hr />
-            <div className="row m-5">
-              <div className="col-md-5">
+            <div className="co mt-3 p-5">
+              <div className="co-1">
                 {" "}
-                <p>
-                  <img src={default_image} alt="image" />
-                </p>
+
+                  <img src={default_image} alt="image" id="image1"/>
               </div>
-              <div className="col-md-5" />
-              <div className="register">
-                <NavLink to="/signup">
+              <div className="co-2 mt-2 image2">
+                {" "}
+
+                  <img src={food} alt="image" id="image2"/>
+              </div>
+              <div className="co-3" id="reg">
+            <NavLink to="/signup">
                   {" "}
-                  <a>
+
                     {" "}
-                    <strong>Register With Us</strong>
-                  </a>
-                </NavLink>
-              </div>
+                    Register
+
+            </NavLink>
+          </div>
             </div>
           </div>
         </section>
