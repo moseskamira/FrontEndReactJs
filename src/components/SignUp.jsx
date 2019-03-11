@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
 import { fetchSignUp } from "../actions/signupAction";
+import "../css/main.css";
 
 export class SignUp extends Component {
   constructor(props) {
@@ -11,7 +12,8 @@ export class SignUp extends Component {
       last_name: "",
       email_address: "",
       phone_number: "",
-      password: ""
+      password: "",
+      loading: false,
     };
   }
 
@@ -28,13 +30,17 @@ export class SignUp extends Component {
       last_name: this.state.last_name,
       email_address: this.state.email_address,
       phone_number: this.state.phone_number,
-      password: this.state.password
+      password: this.state.password,
     };
+
+    this.setState({ loading: true })
 
     this.props.fetchSignUp(data);
   };
 
   componentWillReceiveProps(nextProps) {
+    console.log(nextProps)
+    this.setState({ loading: false });
     if (nextProps.signUp.message) {
       this.props.history.push("/");
     }
@@ -52,11 +58,12 @@ export class SignUp extends Component {
               </font>{" "}
             </center>
           </h5>
-          <form onSubmit={this.handleRegSubmit}>
-            <div className="form-group">
+          <form onSubmit={this.handleRegSubmit} id="signUp">
+            <div className="form-group" >
               <label htmlFor="firstName">First Name</label>
               <input
                 type="text"
+                required= {true}
                 className="form-control"
                 name="first_name"
                 id="firstName"
@@ -70,6 +77,7 @@ export class SignUp extends Component {
               <label htmlFor="lastName">Last Name</label>
               <input
                 type="text"
+                required= {true}
                 name="last_name"
                 className="form-control"
                 id="exampleInputLastName"
@@ -83,6 +91,7 @@ export class SignUp extends Component {
               <label htmlFor="email">Email address</label>
               <input
                 type="email"
+                required= {true}
                 name="email_address"
                 className="form-control"
                 id="email"
@@ -96,6 +105,7 @@ export class SignUp extends Component {
               <label htmlFor="phone">Phone Number</label>
               <input
                 type="phone"
+                required= {true}
                 name="phone_number"
                 className="form-control"
                 id="exampleInputPhoneNumber"
@@ -107,6 +117,7 @@ export class SignUp extends Component {
               <label htmlFor="password">Password</label>
               <input
                 type="password"
+                required= {true}
                 name="password"
                 className="form-control"
                 id="exampleInputPassword"
@@ -123,6 +134,11 @@ export class SignUp extends Component {
             <button type="submit" className="btn btn-primary">
               Submit
             </button>
+            {this.state.loading ? (
+              <div>
+                loading...
+              </div>
+            ) : ''}
           </form>
         </div>
       </center>
